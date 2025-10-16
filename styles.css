@@ -1,0 +1,48 @@
+:root {
+    --brand: #b30000;
+}
+body { background: #fff; }
+.navbar { background: var(--brand) !important; }
+.card-clean { border: 1px solid #eee; border-radius: 12px; }
+.page-title { font-weight: 700; }
+
+/* Fixed vertical sidebar on the left */
+.sidebar-fixed {
+    position: fixed;
+    top: 56px; /* default Bootstrap navbar height */
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    background: var(--brand);
+}
+
+.sidebar-fixed .list-group-item {
+    background: transparent;
+    color: #fff;
+    border: 0;
+}
+.sidebar-fixed .list-group-item:hover {
+    background: rgba(255,255,255,0.12);
+}
+.sidebar-fixed .list-group-item i {
+    margin-right: 6px;
+}
+
+/* Push main content to the right of the fixed sidebar */
+.content-with-sidebar {
+    margin-left: 240px;
+}
+
+@media (max-width: 991.98px) {
+    .sidebar-fixed { position: static; top: auto; height: auto; width: 100%; }
+    .content-with-sidebar { margin-left: 0; }
+}
+
+/* Red primary button for homepage and actions */
+.btn-custom {
+    background: var(--brand);
+    color: #ffffff;
+    border: 1px solid var(--brand);
+}
+.btn-custom:hover { opacity: 0.95; }
